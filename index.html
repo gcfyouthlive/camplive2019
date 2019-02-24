@@ -16,7 +16,7 @@
   <link rel="icon" href="img/favicon.svg">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script> -->
 </head>
 
 <body>
@@ -24,7 +24,7 @@
     <a href="#aboutcamp"><img class="arrow-down" src="img/arrow.svg" /></a>
   </header>
 
-  <section id="aboutcamp" class="col-12 text-left" style="background-color:#f6f7de">
+  <section id="aboutcamp" class="col-12 text-left" style="background-color:#f8f4e0">
     <div class="container" style="max-width:420px">
       <img width="100%" src="img/camp-live.svg" class="pb-5">
       <div class="camp-text">
@@ -33,7 +33,7 @@
     </div>
   </section>
 
-  <section id="details" style="background-color:#fcf8f0" class="py-5">
+  <section id="details" style="background-color:#f8f4e0;font-size:0.85rem" class="py-5">
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-6 text-center">
@@ -43,7 +43,7 @@
             <p>May 30 - June 2, 2019
               <br>Batangas Country Club
               <br>
-              <br><span style="font-size: 1rem;">Gr 7 - Incoming Gr 12</span>
+              <br>Gr 7 - Incoming Gr 12
             </p>
           </div>
           <button type="button" class="btn btn-outline-dark" style="border-radius:25px; border-width:2px">
@@ -58,7 +58,7 @@
             <p>June 5 - June 8, 2019
               <br>Rizal Re-Creation Center
               <br>
-              <br><span style="font-size: 1rem;">Incoming College - Fresh Graduates</span>
+              <br>Incoming College - Fresh Grads
             </p>
           </div>
           <button type="button" class="btn btn-outline-dark col-auto" style="border-radius:25px; border-width:2px">
@@ -108,22 +108,8 @@
 	        <br>Ruby corner Garnet Roads, Ortigas Center,
 	        <br>Pasig City, Philippines 1605
 	      </div>
-	      <div class="py-3">
-	        <span class="fa-layers fa-3x mr-2"><a href="https://facebook.com/gcfyouthlive">
-	          <i class="fas fa-circle" style="color:#EF694B"></i>
-	          <i class="fab fa-facebook-f fa-inverse" data-fa-transform="shrink-6"></i>
-	        </a></span>
-	        <span class="fa-layers fa-3x mr-2"><a href="https://www.instagram.com/gcfyouthlive/">
-	          <i class="fas fa-circle" style="color:#EF694B"></i>
-	          <i class="fab fa-instagram fa-inverse" data-fa-transform="shrink-6"></i>
-	        </a></span>
-	        <span class="fa-layers fa-3x mr-2"><a href="mailto:youthlive@gcf.org.ph">
-	          <i class="fas fa-circle" style="color:#EF694B"></i>
-	          <i class="fas fa-envelope fa-inverse" data-fa-transform="shrink-7"></i>
-	        </a></span>
-	      </div>
 	      <div class="pb-3">
-	        &copy; 2018 Greenhills Christian Fellowship
+	        &copy; 2019 Greenhills Christian Fellowship
 	      </div>
 	    </div>
 		</div>
@@ -141,15 +127,6 @@
         scrollTop: $( $.attr(this, 'href') ).offset().top
       }, 500);
       return false;
-    });
-
-    $('.answer').on('show.bs.collapse', function() {
-      $(this).parents('.question').siblings('.fa-caret-right').css({'transform':'rotate(90deg)','color':'#F06B4B'});
-      $(this).siblings('a').css('color', '#F06B4B');
-    });
-    $('.answer').on('hide.bs.collapse', function() {
-      $(this).parents('.question').siblings('.fa-caret-right').css({'transform':'none','color':'#000000'});
-      $(this).siblings('a').css('color', '#1a1a1a');
     });
   });
   </script>

@@ -299,9 +299,9 @@ section#campsite img {
 	}
 }
 
-section#aboutcamp {
+/* section#aboutcamp {
 	min-height: 50% !important;
-}
+} */
 
 .frm .dropdown-menu {
 	min-width:inherit;

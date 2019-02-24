@@ -37,7 +37,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-6 text-center">
-          <img width="100%" src="img/rooted.png" class="col-12"/>
+          <img width="100%" class="col-12 lazy" alt="BEYOND" data-src="img/rooted.png"/>
           <div class="col-12 mt-3 camp-details">
             <img class="mb-3" src="img/title-hs.svg" style="height:1.75rem"/>
             <p>May 30 - June 2, 2019
@@ -52,7 +52,7 @@
           </button>
         </div>
         <div class="mt-5 mt-md-0 col-12 col-md-6 text-center">
-          <img width="100%" src="img/beyond.png" class="col-12"/>
+          <img width="100%" class="col-12 lazy" alt="BEYOND" data-src="img/beyond.png"/>
           <div class="col-12 mt-3 camp-details">
             <img class="mb-3" src="img/title-college.svg" style="height:1.75rem"/>
             <p>June 5 - June 8, 2019
@@ -132,9 +132,15 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@11.0.0/dist/lazyload.min.js"></script>
   <script>
   $(document).ready(function(){
-    var $root = $('html, body');
+    let $root = $('html, body');
+
+    let lazyLoadInstance = new LazyLoad({
+    elements_selector: ".lazy"
+    // ... more custom settings?
+    });
 
     $('a[href^="#"]').click(function () {
       $root.animate({

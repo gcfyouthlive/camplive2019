@@ -145,12 +145,6 @@ a {
 	background-color: white;
 }
 
-.camp-details {
-	/* text-transform: uppercase; */
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-}
-
 section#youthlive {
 	margin-top: 0;
 	margin-bottom: 0;
@@ -336,7 +330,7 @@ section#campsite img {
 }
 
 .btn.sign-up-button{
-	border-radius:25px; 
+	border-radius:25px;
 	border-width:2px;
 	border-color: #493b3a;
 	color: #493b3a;

@@ -45,41 +45,6 @@ section {
 	margin: 0;
 }
 
-.banner {
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-	padding-top: 0;
-	padding-bottom: 0
-}
-
-#camp.banner {
-  background-image: url("../img/banner-mobile.jpg");
-	height: 100%;
-	position: relative;
-}
-
-@media (min-width: 576px) {
-  #camp.banner {
-    background-image: url("../img/banner-web.png");
-		height: 100%;
-  }
-}
-
-#living.banner {
-	background-image: url("../img/live-desktop.png");
-	height: 100%;
-	max-height: 360px;
-}
-
-@media (min-width: 576px) {
-	#living.banner {
-		max-height: 480px;
-	}
-}
-
 #faqs ul {
 	padding: 0;
 	margin: 0;
@@ -89,14 +54,6 @@ section {
 #faqs li {
 	margin-bottom: 0.9rem;
 	color: #1a1a1a;
-}
-
-.arrow-down {
-	position: absolute;
-	bottom: 0;
-	margin-bottom: 60px;
-	width: 30px;
-	margin-left: -15px;
 }
 
 .question a {

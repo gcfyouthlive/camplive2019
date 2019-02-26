@@ -176,6 +176,11 @@ section#youthlive {
 	margin-top: 1rem;
 }
 
+#form-splash {
+  text-align: center;
+  background-color: #FCF8F0;
+}
+
 @media (min-width: 576px) {
 	#form-instructions {
 		padding-right: 3rem;

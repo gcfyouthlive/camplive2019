@@ -177,8 +177,25 @@ section#youthlive {
 }
 
 #form-splash {
-  text-align: center;
   background-color: #FCF8F0;
+}
+
+#form-splash #logo {
+  margin: 64px 0 16px 128px;
+  height: 32px;
+  width: 64px;
+}
+
+#form-splash #camp-banner {
+  margin: -48px 0 0 64px;
+  width: 576px;
+}
+
+#form-splash #camp-title {
+  margin-left: 280px;
+  height: 64px;
+  width: 128px;
+  text-align: center;
 }
 
 @media (min-width: 576px) {

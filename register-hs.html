@@ -8,169 +8,17 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Navbar  -->
-  <nav class="navbar navbar-expand-sm navbar-dark clearfix bg-dark">
-		<div class="container" style="max-width:1200px">
-    	<a class="navbar-brand" href="/"><img class="mr-3" src="img/camp-logo-white.svg" height="40px">HS Camp Registration</a>
-		</div>
-  </nav>
 	<div id="form-proper">
-		<div class="container">
-			<div class="row">
-				<div id="form-splash" class="col-sm-6">
-          <img src="img/rooted.png" width=576>
-				</div>
-				<div id="form-body" class="col-sm-6" style="padding-top:50px">
-					<div class="col-12">
-						<div class="row">
-							<div class="form-title" style="color:#EF694B;font-size:2rem;line-height:normal;padding-bottom:2rem">
-								tell us <img src="img/favicon.svg" height=40px style="margin-top:-1.5rem;margin-left:-0.3rem"><br>about yourself
-							</div>
-						</div>
-						<div class="row">
-					    <form id="step1" class="frm needs-validation">
-								<div class="form-row">
-									<div class="col-12">
-										<label for="email">Email</label>
-										<input required type="email" class="form-control" name="email" placeholder="email" />
-									</div>
-								</div>
-								<div class="form-row">
-									<div class="col-sm-6">
-										<label for="first_name">First name</label>
-										<input required type="text" class="form-control" name="first_name" placeholder="first name" />
-									</div>
-									<div class="col-sm-6">
-										<label for="last_name">Last name</label>
-										<input required type="text" class="form-control" name="last_name" placeholder="last name" />
-									</div>
-								</div>
-								<div class="form-row">
-									<div class="col-sm-6">
-										<label for="nickname">Nickname</label>
-										<input required type="text" class="form-control" name="nickname" placeholder="nickname" />
-									</div>
-									<div class="col-sm-6">
-										<label for="gender">Gender</label>
-										<div class="input-group">
-											<input required type="text" class="form-control text-left dropdown-toggle readonly" pattern="Male|Female" name="gender" placeholder="gender" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
-											<div class="dropdown-menu">
-									      <a class="dropdown-item">Male</a>
-									      <a class="dropdown-item">Female</a>
-									    </div>
-										</div>
-									</div>
-								</div>
-								<div class="form-row">
-									<div class="col-sm-12">
-										<label for="birthday">Birthday (MM/DD/YYYY)</label>
-										<div class="row">
-											<div class="col-3 pr-1">
-												<input required type="number" min=01 max=12 class="form-control" name="birthmonth" placeholder="MM" />
-											</div>
-											<div class="col-3 px-1">
-												<input required type="number" min=01 max=31 class="form-control" name="birthday" placeholder="DD" />
-											</div>
-											<div class="col-6 pl-1">
-												<input required type="number" min=1980 max=2008 class="form-control" name="birthyear" placeholder="YYYY" />
-											</div>
-										</div>
-									</div>
-								</div>
-					      <div class="float-right">
-					      	<button class="btn btn-primary btn-control open2" type="button">next</button>
-					      </div>
-					    </form>
-					    <form id="step2" class="frm -hide needs-validation">
-								<div class="form-row">
-									<div class="col-12">
-										<label for="school">School</label>
-										<input required type="text" class="form-control" name="school" placeholder="school" />
-									</div>
-								</div>
-								<div class="form-row">
-									<div class="col-sm-6">
-										<label for="year">Incoming Year Level</label>
-										<input required type="text" class="form-control text-left dropdown-toggle readonly" name="year" placeholder="year" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
-										<div class="dropdown-menu" style="width:100%">
-											<a class="dropdown-item">Gr 7</a>
-											<a class="dropdown-item">Gr 8</a>
-											<a class="dropdown-item">Gr 9</a>
-											<a class="dropdown-item">Gr 10</a>
-											<a class="dropdown-item">Gr 11</a>
-											<a class="dropdown-item">Gr 12</a>
-											<a class="dropdown-item">N/A</a>
-										</div>
-									</div>
-									<div class="col-sm-6">
-										<label for="facebook_id">Facebook id (optional)</label>
-										<input type="text" class="form-control" name="facebook_id" placeholder="facebook id" />
-									</div>
-								</div>
-								<div class="form-row">
-									<div class="col-sm-6">
-										<label for="mobileno">Mobile no (09XXXXXXXXX)</label>
-										<input required type="tel" minlength="11" class="form-control" name="mobileno" placeholder="mobile number" />
-									</div>
-								</div>
-								<div class="form-row">
-									<div class="col-sm-12">
-										<label for="notes">Special concerns (optional)</label>
-										<textarea class="form-control" name="notes" rows="3" placeholder="Allergies, requests, etc."></textarea>
-									</div>
-								</div>
-					      <div class="float-right">
-					      	<button class="btn btn-primary btn-control back2" type="button">back</button>
-									<button class="btn btn-primary btn-control open3" type="button">next</button>
-					      </div>
-							</form>
-							<form id="step3" class="frm -hide needs-validation">
-								<div class="form-row">
-									<div class="col-12">
-										<div class="form-check">
-											<input required class="form-check-input" type="checkbox" name="policy" id="policyCheck">
-										  <label class="form-check-label" for="policyCheck">
-												I agree to the <a href="#terms" data-toggle="modal" data-target="#terms">Terms and Conditions</a>
-											</label>
-
-											<div class="modal fade" id="terms" tabindex="-1" role="dialog" aria-labelledby="terms" aria-hidden="true">
-											  <div class="modal-dialog" role="document">
-											    <div class="modal-content">
-											      <div class="modal-header">
-											        <h5 class="modal-title" id="exampleModalLabel">Terms and Conditions</h5>
-											        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-											          <span aria-hidden="true">&times;</span>
-											        </button>
-											      </div>
-											      <div class="modal-body" style="font-size:0.8rem">
-																	Where you have provided us with your personal data by the  filling up of the summer camp form or through any of the GCF Youth LIVE webpages and affiliates, in providing or making available the personal data, whether directly or through another person, you hereby agree and consent to our collecting, using, disclosing, sharing and otherwise processing the personal data to help us perform the obligations we have with you, communicate with you, or meet any of the purposes GCF Youth LIVE sets out.
-											      </div>
-											    </div>
-											  </div>
-											</div>
-										</div>
-									</div>
-								</div>
-					      <div class="float-right">
-					      	<button class="btn btn-primary btn-control back3" type="button">back</button>
-									<button id="form-sub" type="submit" class="form-sub btn btn-primary btn-control">Submit</button>
-					      </div>
-							</form>
-							<form id="step4" class="frm -hide">
-								<div class="form-row">
-									<div class="col-12">
-										<p>Thank you for registering for camp! Kindly check your email for the waiver form.</p>
-									</div>
-								</div>
-					      <div class="float-right">
-					      	<button class="btn btn-primary btn-control" type="button" onClick="window.location.href=window.location.href">New Registration</button>
-					      </div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+    <div class="row">
+      <div id="form-splash" class="col-sm-6">
+        <img id="logo" src="img/camp-live.svg">
+        <img id="camp-banner" src="img/rooted.png">
+        <div id="camp-title">
+          <!-- can change to not image -->
+          <img src="img/title-hs.svg">
+        </div>
+      </div>
+    </div>
 	</div>
 
 	<footer class="bg-dark pt-4 pb-2">

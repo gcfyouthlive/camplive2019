@@ -176,6 +176,53 @@ section#youthlive {
 	margin-top: 1rem;
 }
 
+#form-splash {
+  background-color: #FCF8F0;
+}
+
+#form-splash #logo {
+  margin: 64px 0 16px 128px;
+  height: 32px;
+  width: 64px;
+}
+
+#form-splash #camp-banner {
+  margin: -48px 0 0 64px;
+  width: 576px;
+}
+
+#form-splash #camp-title {
+  height: 64px;
+  text-align: center;
+}
+
+#form-info {
+  background-color: #FCF8F0;
+}
+
+#form-info #camp-title {
+  margin-top: 152px;
+}
+
+#form-info #camp-title img {
+  height: 24px;
+}
+
+#form-info #line {
+  height: 1px;
+  margin: 24px 0 24px 0;
+  border-bottom: 3px solid #493b3a;
+}
+
+#form-info #year-level {
+  margin: 64px 0 64px 0;
+}
+
+#form-info #camp-fee img {
+  height: 24px;
+  margin-bottom: 16px;
+}
+
 @media (min-width: 576px) {
 	#form-instructions {
 		padding-right: 3rem;

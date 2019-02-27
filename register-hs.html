@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HS Camp Sign-up | CampLIVE: Rooted</title>
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+	<link rel="icon" href="img/favicon.svg">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div id="form-proper" class="container-fluid">
+    <div class="row">
+      <div id="form-splash" class="col-sm-6">
+        <img id="logo" src="img/camp-live.svg">
+        <img id="camp-banner" src="img/rooted.png">
+        <div id="camp-title">
+          <!-- can change to not image -->
+          <!-- <img src="img/title-hs.svg"> -->
+          <p> High School Camp </p>
+        </div>
+      </div>
+      <div id="form-info" class="col-sm-6">
+        <div id="camp-title">
+          <img src="img/title-hs.svg">
+        </div>
+        <div id="line"></div>
+        <div id="camp-site">
+          <p>May 30 - June 2, 2019<br>
+					Batangas Country Club, Batangas</p>
+        </div>
+        <div id="year-level">
+          <p> Gr 7 to Incoming Gr 12 </p>
+        </div>
+        <div id="camp-fee">
+          <img src="img/title-fees.svg">
+          <p><strong>P2000</strong> Early Bird until May 5<br>
+          <strong>P2500</strong> Regular until May 19</p>
+        </div>
+      </div>
+    </div>
+	</div>
+
+	<footer class="pt-4 pb-2" style="background-color:#493b3a;font-size:0.7rem">
+		<div class="container d-md-flex flex-row-reverse" style="max-width:1200px">
+	    <div class="mr-auto text-white">
+        <div class="d-flex py-3">
+  	      <img src="img/gcf-logo-white.png" height=80px/>
+  	      <div class="align-bottom ml-4">
+  	        <b>Greenhills Christian Fellowship</b>
+  	        <br>Ruby cor. Garnet Rds., Ortigas Center,
+  	        <br>Pasig City, Philippines 1605
+    	      <br><br>&copy; 2019 Greenhills Christian Fellowship
+  	      </div>
+        </div>
+	    </div>
+		</div>
+  </footer>
+
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/popper.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function(){
+		var $root = $('html, body');
+		$('.readonly').keydown(function(e) {
+			e.preventDefault();
+		});
+		$('.readonly').on('keydown paste', function(e) {
+			e.preventDefault();
+		});
+		$('.readonly').on('focus', function() {
+			$(this).trigger('blur');
+		});
+
+		$(".frm a").click(function() {
+			var value = $(this).html();
+			$(this).parents('.dropdown-menu').siblings('input').prop("value",value).css("opacity","1");
+		});
+
+		$(".open2").click(function() {
+			var form = $(".frm#step1")[0];
+			form.classList.add('was-validated');
+			if (form.checkValidity() === false) {
+				return false;
+			}
+			else {
+				$(".frm#step1").hide("fast");
+				$(".frm#step2").show("slow");
+				$root.animate({
+					scrollTop: $("#form-body").offset().top
+				}, 500);
+				return true;
+			}
+		});
+    $(".back2").click(function () {
+      $(".frm#step2").hide("fast");
+      $(".frm#step1").show("slow");
+			$root.animate({
+				scrollTop: $("#form-body").offset().top
+			}, 500);
+    });
+		$(".open3").click(function() {
+			var form = $(".frm#step2")[0];
+			if (form.checkValidity() === false) {
+				form.classList.add('was-validated');
+			}
+			else {
+				$(".frm#step2").hide("fast");
+				$(".frm#step3").show("slow");
+				$root.animate({
+					scrollTop: $("#form-body").offset().top
+				}, 500);
+			}
+		});
+		$(".back3").click(function () {
+      $(".frm#step3").hide("fast");
+      $(".frm#step2").show("slow");
+			$root.animate({
+				scrollTop: $("#form-body").offset().top
+			}, 500);
+    });
+
+    $( "form#step3" ).submit(function (e) {
+      e.preventDefault();
+			var form_data = $("#step1 input:input, #step2 input:input, #step2 textarea:input");
+			data = {};
+			for (each of form_data) {
+				data[each.name] = each.value;
+			}
+			data.camp = "HS";
+			data.birthdate = data.birthyear + '-' + data.birthmonth + '-' + data.birthday;
+			$.ajax({
+			  url: 'https://api.gcfyouthlive.com/campers',
+			  // url: 'http://localhost:3000/campers',
+			  type: "POST",
+			  data: JSON.stringify(data),
+			  contentType: "application/json; charset=utf-8",
+			  dataType: "json",
+			  success: function(response) {
+					$(".frm#step3").hide("fast");
+					$(".frm#step4").show("slow");
+					$root.animate({
+						scrollTop: $("#form-body").offset().top
+					}, 500);
+			  },
+				// error: function(){
+				// 	$(".frm#step3").hide("fast");
+				// 	$(".frm#step4").show("slow");
+				// 	$root.animate({
+				// 		scrollTop: $("#form-body").offset().top
+				// 	}, 500);
+			  // }
+			});
+    });
+	});
+</script>
+
+
+</body>
+</html>

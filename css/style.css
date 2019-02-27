@@ -192,10 +192,35 @@ section#youthlive {
 }
 
 #form-splash #camp-title {
-  margin-left: 280px;
   height: 64px;
-  width: 128px;
   text-align: center;
+}
+
+#form-info {
+  background-color: #FCF8F0;
+}
+
+#form-info #camp-title {
+  margin-top: 152px;
+}
+
+#form-info #camp-title img {
+  height: 24px;
+}
+
+#form-info #line {
+  height: 1px;
+  margin: 24px 0 24px 0;
+  border-bottom: 3px solid #493b3a;
+}
+
+#form-info #year-level {
+  margin: 64px 0 64px 0;
+}
+
+#form-info #camp-fee img {
+  height: 24px;
+  margin-bottom: 16px;
 }
 
 @media (min-width: 576px) {

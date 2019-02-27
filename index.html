@@ -58,6 +58,27 @@
         #camp.banner {
           background-image: url("img/banner-web.png");
           background-position: bottom;
+         
+        }
+        .fadeBanner{
+          background-color: #F8F4E0;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          opacity: 0;
+          -webkit-animation: myfirst 2s ; /* Chrome, Safari, Opera */
+          animation: myfirst 2s ;
+        }
+                /* Chrome, Safari, Opera */
+        @-webkit-keyframes myfirst {
+          from {opacity: 1;}
+          to {opacity: 0;}
+        }
+
+        /* Standard syntax */
+        @keyframes myfirst {
+          from {opacity: 1;}
+          to {opacity: 0;}
         }
 
         #camp.banner img {
@@ -88,6 +109,9 @@
         id="camp"
         class="banner h-100 d-flex justify-content-center align-items-center"
       >
+      <div class="row fadeBanner">
+
+      </div>
         <div class="row">
           <div class="col-12 col-offset-6">
               <img src="img/camp-live.svg" />

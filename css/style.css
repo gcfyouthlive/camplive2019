@@ -29,6 +29,11 @@ a {
 	outline: 0;
 }
 
+.btn:focus,.btn:active {
+   outline: none !important;
+   box-shadow: none;
+}
+
 h1,h2,h3,h4,h5,h6 {
 	color: #1a1a1a;
 }
@@ -88,10 +93,6 @@ section {
 input.form-control:disabled {
 	color: #000000;
 	background-color: #ffffff;
-}
-
-a {
-	cursor: pointer;
 }
 
 .container {
@@ -274,18 +275,20 @@ section#campsite img {
 	background-color: #EF694B;
 }
 
-.btn.sign-up-button{
+a.btn.sign-up-button{
 	border-radius:25px;
 	border-width:2px;
 	border-color: #493b3a;
 	color: #493b3a;
 	width: 125px;
 }
-.btn.sign-up-button:hover{
+a.btn.sign-up-button:hover{
 	background-color: #493b3a;
 	color: #fff;
 }
-.btn.sign-up-button:not(:disabled):not(.disabled).active, .btn-outline-dark:not(:disabled):not(.disabled):active, .show>.btn-outline-dark.dropdown-toggle {
+a.btn.sign-up-button:not(:disabled):not(.disabled).active,
+a.btn-outline-dark:not(:disabled):not(.disabled):active,
+.show>a.btn-outline-dark.dropdown-toggle {
 	color: #fff;
 	background-color: #493b3a;
 	border-color: #493b3a;

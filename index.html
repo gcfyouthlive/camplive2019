@@ -60,10 +60,10 @@
       height: 100%;
       width: 100%;
       opacity: 0;
-      -webkit-animation: myfirst 2s ; /* Chrome, Safari, Opera */
-      animation: myfirst 2s ;
+      -webkit-animation: myfirst 3s ; /* Chrome, Safari, Opera */
+      animation: myfirst 3s ;
     }
-            /* Chrome, Safari, Opera */
+    /* Chrome, Safari, Opera */
     @-webkit-keyframes myfirst {
       from {opacity: 1;}
       to {opacity: 0;}
@@ -87,11 +87,9 @@
 
 <body>
   <div class="text-center h-100" style="background-color:#f8f4e0">
-    <div class="row fadeBanner">
-
-    </div>
     <div id="camp" class="banner h-100 d-flex justify-content-center align-items-center">
-      <img src="img/camp-live.svg"/>
+      <div class="fadeBanner"></div>
+      <img src="img/camp-live.svg"/ style="z-index:1000">
     </div>
     <a href="#aboutcamp"><img class="arrow-down" src="img/arrow.svg" /></a>
   </div>

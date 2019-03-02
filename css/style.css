@@ -276,6 +276,8 @@ section#campsite img {
 }
 
 a.btn.sign-up-button{
+	-webkit-appearance: none;
+	-moz-appearance: none;
 	border-radius:25px;
 	border-width:2px;
 	border-color: #493b3a;

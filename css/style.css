@@ -24,6 +24,11 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
+a {
+	cursor: pointer;
+	outline: 0;
+}
+
 h1,h2,h3,h4,h5,h6 {
 	color: #1a1a1a;
 }
@@ -109,51 +114,14 @@ section#youthlive {
 	padding-bottom: 0;
 }
 
-.frm.-hide {
-  display: none;
-}
-
-.frm .form-row {
-	margin: 1.2rem 0;
-}
-
-.frm label {
-	color: #EF694B;
-	font-size: 0.75rem;
-	font-weight: 700;
-	text-transform: lowercase;
-}
-
-.frm input,
-.frm textarea {
-	padding: 0.8rem 0.8rem;
-	border-radius: 0;
-	border-color: transparent;
-}
-
-.frm input:focus::placeholder,
-.frm textarea:focus::placeholder  {
-	/* color: transparent; */
-}
-
-.frm input::placeholder,
-.frm textarea::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-		/* color: #EF694B; */
-    /* opacity: 1; /* Firefox */
-}
-
-.frm input[type="button"] {
-	opacity: 0.8;
-}
-
 #form-proper {
 	background: none;
 }
 
 @media (min-width: 576px) {
-	#form-proper {
+	/* #form-proper {
 		background: linear-gradient(90deg, #FFFFFF 50%, #EDEFEE 50%);
-	}
+	} */
 }
 
 #form-body {
@@ -176,10 +144,6 @@ section#youthlive {
 	margin-top: 1rem;
 }
 
-#form-splash {
-  background-color: #FCF8F0;
-}
-
 #form-splash #logo {
   margin: 64px 0 16px 128px;
   height: 32px;
@@ -194,10 +158,6 @@ section#youthlive {
 #form-splash #camp-title {
   height: 64px;
   text-align: center;
-}
-
-#form-info {
-  background-color: #FCF8F0;
 }
 
 #form-info #camp-title {
@@ -301,25 +261,6 @@ section#campsite img {
 /* section#aboutcamp {
 	min-height: 50% !important;
 } */
-
-.frm .dropdown-menu {
-	min-width:inherit;
-	width: 100%;
-}
-
-.frm .dropdown-item {
-	border-radius: 0;
-	border-color: transparent;
-}
-
-.frm .btn {
-	padding: 0.8rem 4rem 0.8rem 0.8rem;
-	margin: 1.2rem 0;
-	background-color:#EF694B;
-	border-radius: 0;
-	border-color: transparent;
-	color: white;
-}
 
 .btn.register-button {
 	color: #EF694B;

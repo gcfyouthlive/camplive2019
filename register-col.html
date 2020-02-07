@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HS Camp Sign-up | CampLIVE: Rooted</title>
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+	<link rel="icon" href="img/favicon.svg">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+	.frm.-hide {
+	  display: none;
+	}
+
+	.frm .form-row {
+		margin: 1.2rem 0;
+	}
+
+	.frm .dropdown-menu {
+		min-width:inherit;
+		width: 100%;
+		font-size: inherit;
+	}
+
+	.frm .dropdown-menu:focus {
+		background-color: #fff;
+	}
+
+	.frm label {
+		color: #493b3a;
+		font-size: 0.75rem;
+		font-weight: 700;
+	}
+
+	.frm input,
+	.frm textarea {
+		font-size: 0.75rem;
+		border-radius: 0;
+		border: 2.5px solid #493b3a ;
+	}
+
+	.frm input:focus,
+	.frm textarea:focus  {
+		border-color: #493b3a;
+		box-shadow: none; -webkit-box-shadow: none
+	}
+
+	.frm input:focus::placeholder,
+	.frm textarea:focus::placeholder  {
+		color: transparent;
+	}
+
+	.frm input::placeholder,
+	.frm textarea::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+			color: #493b3a;
+	    opacity: 0; /* Firefox */
+	}
+
+	.frm input[type="button"] {
+		/* opacity: 0.8; */
+	}
+	.frm .dropdown-menu {
+		min-width:inherit;
+		width: 100%;
+	}
+
+	.frm .dropdown-item {
+		border-radius: 0;
+		border-color: transparent;
+	}
+
+	.frm .btn {
+		border-radius: 25px;
+		background-color: #493b3a;
+		border: none;
+		font-size: 0.75rem;
+		font-weight: 700;
+		padding: 0.75rem;
+	}
+
+	#form-proper {
+		background: #f8f4e0;
+		font-size: 0.875rem;
+	}
+
+	@media (min-width: 576px) {
+		#form-proper {
+			min-height: 80vh;
+			font-size: 0.875rem;
+			background: linear-gradient(90deg, #f8f4e0 50%, #fff 50%);
+		}
+	}
+	</style>
+</head>
+<body>
+	<div id="form-proper">
+    <div class="container pt-4">
+			<div class="col-12 d-flex align-items-end" style="height:50px">
+				<a class="h-100" href="/"><img class="h-100" src="img/camp-live.svg" /></a>
+				<!-- <img class="ml-4" height="50%" src="img/title-hs.svg"> -->
+			</div>
+			<div class="row">
+	      <div class="col-sm-6 mb-3">
+					<div class="col-12 mt-5" style="height:20px">
+						<img height="100%" src="img/title-howto.svg">
+		        <hr style="border: 1px solid #493b3a;">
+					</div>
+	        <div class="col-12 mt-5">
+						<div class="d-flex mt-3 align-items-center">
+							<div class="col-2 px-0"><img height="35rem" src="img/icons2.png"/></div>
+							<div class="col-10 px-1">Complete the registration form</div>
+						</div>
+						<div class="d-flex mt-3 align-items-center">
+							<div class="col-2 px-0"><img height="35rem" src="img/icons0.png"/></div>
+							<div class="col-10 px-1">Check your email for the waiver form</div>
+						</div>
+						<div class="d-flex mt-3 align-items-center">
+							<div class="col-2 px-0"><img height="35rem" src="img/icons1.png"/></div>
+							<div class="col-10 px-1">Print and sign the waiver form</div>
+						</div>
+						<div class="d-flex mt-3 align-items-center">
+							<div class="col-2 px-0"><img height="35rem" src="img/icons3.png"/></div>
+							<div class="col-10 px-1" style="max-width:300px">Present signed waiver form and pay camp fee at the GCF camp booth</div>
+						</div>
+					</div>
+	      </div>
+	      <div class="col-sm-6 pb-3" style="background: #fff">
+	        <div class="mt-5" style="height:20px">
+	          <img height="100%" src="img/title-about.svg">
+	        </div>
+					<div class="row">
+						<div class="col-12">
+							<form id="step1" class="frm needs-validation">
+								<div class="form-row">
+									<div class="col-12">
+										<label for="email">Email</label>
+										<input required type="email" class="form-control" name="email" placeholder="email" />
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="col-sm-6">
+										<label for="first_name">First name</label>
+										<input required type="text" class="form-control" name="first_name" placeholder="first name" />
+									</div>
+									<div class="col-sm-6">
+										<label for="last_name">Last name</label>
+										<input required type="text" class="form-control" name="last_name" placeholder="last name" />
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="col-sm-6">
+										<label for="nickname">Nickname</label>
+										<input required type="text" class="form-control" name="nickname" placeholder="nickname" />
+									</div>
+									<div class="col-sm-6">
+										<label for="gender">Gender</label>
+										<div class="input-group">
+											<input required type="text" class="form-control text-left dropdown-toggle readonly" pattern="Male|Female" name="gender" placeholder="gender" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
+											<div class="dropdown-menu">
+												<a class="dropdown-item">Male</a>
+												<a class="dropdown-item">Female</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="col-sm-12">
+										<label for="birthday">Birthday (MM/DD/YYYY)</label>
+										<div class="row">
+											<div class="col-3 pr-1">
+												<input required type="number" min=01 max=12 class="form-control" name="birthmonth" placeholder="MM" />
+											</div>
+											<div class="col-3 px-1">
+												<input required type="number" min=01 max=31 class="form-control" name="birthday" placeholder="DD" />
+											</div>
+											<div class="col-6 pl-1">
+												<input required type="number" min=1980 max=2008 class="form-control" name="birthyear" placeholder="YYYY" />
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="float-left">
+									<button class="btn btn-primary btn-control open2" type="button">CONTINUE</button>
+								</div>
+							</form>
+							<form id="step2" class="frm -hide needs-validation">
+								<div class="form-row">
+									<div class="col-12">
+										<label for="school">School</label>
+										<input required type="text" class="form-control" name="school" placeholder="school" />
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="col-sm-6">
+										<label for="year">Incoming Year Level</label>
+										<input required type="text" class="form-control text-left dropdown-toggle readonly" name="year" placeholder="year" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
+										<div class="dropdown-menu" style="width:100%">
+											<a class="dropdown-item">1st Year</a>
+											<a class="dropdown-item">2nd Year</a>
+											<a class="dropdown-item">3rd Year</a>
+											<a class="dropdown-item">4th Year</a>
+											<a class="dropdown-item">5th Year</a>
+											<a class="dropdown-item">6th Year</a>
+											<a class="dropdown-item">Graduate</a>
+											<a class="dropdown-item">N/A</a>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<label for="course">Course</label>
+										<input required type="text" class="form-control" name="course" placeholder="course" />
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="col-sm-6">
+										<label for="mobileno">Mobile no (09XXXXXXXXX)</label>
+										<input required type="tel" minlength="11" class="form-control" name="mobileno" placeholder="mobile number" />
+									</div>
+									<div class="col-sm-6">
+										<label for="facebook_id">Facebook id (optional)</label>
+										<input type="text" class="form-control" name="facebook_id" placeholder="facebook id" />
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="col-sm-12">
+										<label for="notes">Special concerns (optional)</label>
+										<textarea class="form-control" name="notes" rows="3" placeholder="Allergies, requests, etc."></textarea>
+									</div>
+								</div>
+								<div class="float-left">
+									<button class="btn btn-primary btn-control back2" type="button">BACK</button>
+									<button class="btn btn-primary btn-control open3" type="button">CONTINUE</button>
+								</div>
+							</form>
+							<form id="step3" class="frm -hide needs-validation">
+								<div class="form-row">
+									<div class="col-12">
+										<div class="form-check">
+											<input required class="form-check-input" type="checkbox" name="policy" id="policyCheck">
+											<label class="form-check-label" for="policyCheck">
+												I agree to the <a href="#terms" data-toggle="modal" data-target="#terms">Terms and Conditions</a>
+											</label>
+
+											<div class="modal fade" id="terms" tabindex="-1" role="dialog" aria-labelledby="terms" aria-hidden="true">
+												<div class="modal-dialog" role="document">
+													<div class="modal-content">
+														<div class="modal-header">
+															<h5 class="modal-title" id="exampleModalLabel">Terms and Conditions</h5>
+															<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																<span aria-hidden="true">&times;</span>
+															</button>
+														</div>
+														<div class="modal-body" style="font-size:0.8rem">
+																	Where you have provided us with your personal data by the  filling up of the summer camp form or through any of the GCF Youth LIVE webpages and affiliates, in providing or making available the personal data, whether directly or through another person, you hereby agree and consent to our collecting, using, disclosing, sharing and otherwise processing the personal data to help us perform the obligations we have with you, communicate with you, or meet any of the purposes GCF Youth LIVE sets out.
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="float-left">
+									<button class="btn btn-primary btn-control back3" type="button">BACK</button>
+									<button id="form-sub" type="submit" class="form-sub btn btn-primary btn-control">SUBMIT</button>
+								</div>
+							</form>
+							<form id="step4" class="frm -hide">
+								<div class="form-row">
+									<div class="col-12">
+										<p>Thank you for registering for camp! Kindly check your email for the waiver form.</p>
+									</div>
+								</div>
+								<div class="float-left">
+									<button class="btn btn-primary btn-control" type="button" onClick="window.location.href=window.location.href">New Registration</button>
+								</div>
+							</form>
+						</div>
+					</div>
+	      </div>
+    	</div>
+		</div>
+	</div>
+
+	<footer class="pt-4 pb-2" style="background-color:#493b3a;font-size:0.7rem">
+		<div class="container d-md-flex flex-row-reverse" style="max-width:1200px">
+	    <div class="mr-auto text-white">
+        <div class="d-flex py-3">
+  	      <img src="img/gcf-logo-white.png" height=80px/>
+  	      <div class="align-bottom ml-4">
+  	        <b>Greenhills Christian Fellowship</b>
+  	        <br>Ruby cor. Garnet Rds., Ortigas Center,
+  	        <br>Pasig City, Philippines 1605
+    	      <br><br>&copy; 2019 Greenhills Christian Fellowship
+  	      </div>
+        </div>
+	    </div>
+		</div>
+  </footer>
+
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/popper.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function(){
+		var $root = $('html, body');
+		$('.readonly').keydown(function(e) {
+			e.preventDefault();
+		});
+		$('.readonly').on('keydown paste', function(e) {
+			e.preventDefault();
+		});
+		$('.readonly').on('focus', function() {
+			$(this).trigger('blur');
+		});
+
+		$(".frm a").click(function() {
+			var value = $(this).html();
+			$(this).parents('.dropdown-menu').siblings('input').prop("value",value).css("opacity","1");
+		});
+
+		$(".open2").click(function() {
+			var form = $(".frm#step1")[0];
+			form.classList.add('was-validated');
+			if (form.checkValidity() === false) {
+				return false;
+			}
+			else {
+				$(".frm#step1").hide("fast");
+				$(".frm#step2").show("slow");
+				$root.animate({
+					scrollTop: $("#form-body").offset().top
+				}, 500);
+				return true;
+			}
+		});
+    $(".back2").click(function () {
+      $(".frm#step2").hide("fast");
+      $(".frm#step1").show("slow");
+			$root.animate({
+				scrollTop: $("#form-body").offset().top
+			}, 500);
+    });
+		$(".open3").click(function() {
+			var form = $(".frm#step2")[0];
+			if (form.checkValidity() === false) {
+				form.classList.add('was-validated');
+			}
+			else {
+				$(".frm#step2").hide("fast");
+				$(".frm#step3").show("slow");
+				$root.animate({
+					scrollTop: $("#form-body").offset().top
+				}, 500);
+			}
+		});
+		$(".back3").click(function () {
+      $(".frm#step3").hide("fast");
+      $(".frm#step2").show("slow");
+			$root.animate({
+				scrollTop: $("#form-body").offset().top
+			}, 500);
+    });
+
+    $( "form#step3" ).submit(function (e) {
+      e.preventDefault();
+			var form_data = $("#step1 input:input, #step2 input:input, #step2 textarea:input");
+			data = {};
+			for (each of form_data) {
+				data[each.name] = each.value;
+			}
+			data.camp = "Col";
+			data.birthdate = data.birthyear + '-' + data.birthmonth + '-' + data.birthday;
+			$.ajax({
+			  url: 'https://api.gcfyouthlive.com/campers',
+			  // url: 'http://localhost:3000/campers',
+			  type: "POST",
+			  data: JSON.stringify(data),
+			  contentType: "application/json; charset=utf-8",
+			  dataType: "json",
+			  success: function(response) {
+					$(".frm#step3").hide("fast");
+					$(".frm#step4").show("slow");
+					$root.animate({
+						scrollTop: $("#form-body").offset().top
+					}, 500);
+			  },
+				// error: function(){
+				// 	$(".frm#step3").hide("fast");
+				// 	$(".frm#step4").show("slow");
+				// 	$root.animate({
+				// 		scrollTop: $("#form-body").offset().top
+				// 	}, 500);
+			  // }
+			});
+    });
+	});
+</script>
+
+
+</body>
+</html>
